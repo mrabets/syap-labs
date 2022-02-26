@@ -15,9 +15,12 @@ for n in A:
     neg_sum += n
     j += 1
 
-pos_avg = int(pos_sum / i)
-neg_avg = int(neg_sum / i)
+pos_avg = abs(int(pos_sum / i))
+neg_avg = abs(int(neg_sum / i))
 
-print(A)
-print(f'Positive average: {pos_avg}')
-print(f'Negative average: {neg_avg}')
+if pos_avg > neg_avg:
+  print(f'Positive average is greater')
+elif  pos_avg < neg_avg:
+  print(f'Negative average is greater')
+else:
+  print(f'Negative and postitive averages are equal')
